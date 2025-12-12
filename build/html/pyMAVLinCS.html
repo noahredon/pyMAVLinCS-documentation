@@ -332,6 +332,7 @@
 <li><p>If timeout_heartbeat is 0, no HEARTBEAT wait is performed. Requires the correct MAVLink dialect and assumes MAVLink 2.</p></li>
 <li><p>If sysid_to_request_home is None, HOME position requests are sent only to the target flight controller.</p></li>
 <li><p>If mavlogfile is None, no .tlog file will be generated.</p></li>
+<li><p>If pos_rate&lt;=0, doesn’t request position.</p></li>
 </ul>
 </div>
 <dl class="py attribute">
@@ -1253,6 +1254,7 @@ to go from point i to point f.</p>
 <li><p>Sets up callbacks for sending and receiving MAVLink messages.</p></li>
 <li><p>Initializes MAVLink version and dialect if timeout_heartbeat==0.</p></li>
 <li><p>Starts background MAV thread for message handling.</p></li>
+<li><p>If pos_rate&lt;=0, doesn’t request position.</p></li>
 </ul>
 </div>
 </dd></dl>
