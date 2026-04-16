@@ -297,7 +297,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyMAVLinCS" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.</span></span><span class="sig-name descname"><span class="pre">MAVLinCS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_system=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_component=190</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baud=57600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_heartbeat=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_timesync=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesync_delay=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_home_request=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">home_request_delay=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sysid_to_request_home=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_rate=4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect='ardupilotmega'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger=&lt;Logger</span> <span class="pre">D:\\Hélics\\Git\\pyMAVLinCS\\pyMAVLinCS\\setup_logger.py</span> <span class="pre">(INFO)&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mavlogfile='mav.tlog'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path_to_cwd=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command_ack_to_hide=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcc_class=&lt;class</span> <span class="pre">'pyMAVLinCS.mission_control_code.MCC'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.</span></span><span class="sig-name descname"><span class="pre">MAVLinCS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_system=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_component=190</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baud=57600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_heartbeat=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_timesync=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesync_delay=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_home_request=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">home_request_delay=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sysid_to_request_home=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_rate=4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect='ardupilotmega'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger=&lt;Logger</span> <span class="pre">/mnt/commun/Hélics/Git/pyMAVLinCS/pyMAVLinCS/setup_logger.py</span> <span class="pre">(INFO)&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mavlogfile='mav.tlog'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path_to_cwd=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command_ack_to_hide=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcc_class=&lt;class</span> <span class="pre">'pyMAVLinCS.mission_control_code.MCC'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Allows connection to one or more flight controllers on one link.</p>
 <dl class="field-list simple">
@@ -522,7 +522,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.cartesian_to_geographic_point">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_to_geographic_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">north_displacement</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">east_displacement</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.cartesian_to_geographic_point" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_to_geographic_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">north_displacement</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">east_displacement</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.cartesian_to_geographic_point" title="Link to this definition"></a></dt>
 <dd><p>Returns the GPS coordinates of a point from a Cartesian definition
 (with the drone as the origin).</p>
 <dl class="field-list simple">
@@ -697,7 +697,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.dialect">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dialect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.dialect" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dialect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.dialect" title="Link to this definition"></a></dt>
 <dd><p>Returns the MAVLink dialect in use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -737,7 +737,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.distance_between_two_gps_points">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_between_two_gps_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_alt_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_alt_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.distance_between_two_gps_points" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_between_two_gps_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_alt_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_alt_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.distance_between_two_gps_points" title="Link to this definition"></a></dt>
 <dd><p>Distance between two GPS points.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -771,7 +771,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.distance_between_two_local_points">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_between_two_local_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.distance_between_two_local_points" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_between_two_local_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.distance_between_two_local_points" title="Link to this definition"></a></dt>
 <dd><p>Distance between two points in local coordinates.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -847,7 +847,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.geographic_to_cartesian_point">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">geographic_to_cartesian_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.geographic_to_cartesian_point" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">geographic_to_cartesian_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.geographic_to_cartesian_point" title="Link to this definition"></a></dt>
 <dd><p>Computes the north and east displacements in meters
 to go from point i to point f.</p>
 <dl class="field-list simple">
@@ -1244,15 +1244,15 @@ to go from point i to point f.</p>
 <li><p><strong>baud</strong> (<em>int</em>) – Baud rate for serial connection.</p></li>
 <li><p><strong>timeout_heartbeat</strong> (<em>float</em><em>|</em><em>None</em>) – Time to wait for a HEARTBEAT before considering connection impossible. None = wait indefinitely, 0 = skip waiting.</p></li>
 <li><p><strong>pos_rate</strong> (<em>float</em>) – Frequency (Hz) at which the flight controller sends position messages to the ground station.</p></li>
-<li><p><strong>dialect</strong> (<em>str</em>) – MAVLink dialect, required if timeout_heartbeat==0. “ardupilotmega” for ArduPilot, “common” for PX4.</p></li>
+<li><p><strong>dialect</strong> (<em>str</em>) – MAVLink 2 dialect. Example: “ardupilotmega” for ArduPilot, “common” for PX4.</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
+<li><p>Initializes MAVLink version and dialect.</p></li>
 <li><p>Sets up callbacks for sending and receiving MAVLink messages.</p></li>
-<li><p>Initializes MAVLink version and dialect if timeout_heartbeat==0.</p></li>
 <li><p>Starts background MAV thread for message handling.</p></li>
 <li><p>If pos_rate&lt;=0, doesn’t request position.</p></li>
 </ul>
@@ -1261,7 +1261,7 @@ to go from point i to point f.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.polar_to_geographic_point">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">polar_to_geographic_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bearing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.polar_to_geographic_point" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">polar_to_geographic_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_origine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bearing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.polar_to_geographic_point" title="Link to this definition"></a></dt>
 <dd><p>Returns the GPS coordinates of a point from a polar definition
 (with the drone as the origin).</p>
 <dl class="field-list simple">
@@ -1345,7 +1345,7 @@ to go from point i to point f.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.quaternion_to_euler">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quaternion_to_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.quaternion_to_euler" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quaternion_to_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.quaternion_to_euler" title="Link to this definition"></a></dt>
 <dd><p>Conversion from Quaternion to Euler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1654,10 +1654,10 @@ Must be sent before each mission.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pitch</strong> (<em>float</em>) – Pitch angle (rad).</p></li>
-<li><p><strong>yaw</strong> (<em>float</em>) – Yaw angle (rad).</p></li>
-<li><p><strong>pitch_rate</strong> (<em>float</em>) – Pitch rotation speed (rad/s).</p></li>
-<li><p><strong>yaw_rate</strong> (<em>float</em>) – Yaw rotation speed (rad/s).</p></li>
+<li><p><strong>pitch</strong> (<em>float</em>) – Pitch angle (deg).</p></li>
+<li><p><strong>yaw</strong> (<em>float</em>) – Yaw angle (deg).</p></li>
+<li><p><strong>pitch_rate</strong> (<em>float</em>) – Pitch rotation speed (deg/s).</p></li>
+<li><p><strong>yaw_rate</strong> (<em>float</em>) – Yaw rotation speed (deg/s).</p></li>
 <li><p><strong>lock_pitch</strong> (<em>bool</em>) – True = lock pitch relative to the horizon.</p></li>
 <li><p><strong>lock_yaw</strong> (<em>bool</em>) – True = lock yaw relative to North (earth frame).</p></li>
 <li><p><strong>yaw_in_earth_frame</strong> (<em>bool</em>) – True = yaw expressed in Earth frame, otherwise vehicle frame.</p></li>
@@ -2051,19 +2051,19 @@ Must be sent before each mission.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.time_boot">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_boot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.time_boot" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_boot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.time_boot" title="Link to this definition"></a></dt>
 <dd><p>Time since startup in seconds.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.time_boot_ms">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_boot_ms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.time_boot_ms" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_boot_ms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.time_boot_ms" title="Link to this definition"></a></dt>
 <dd><p>Time since startup in milliseconds.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.time_usec">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_usec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.time_usec" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_usec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.time_usec" title="Link to this definition"></a></dt>
 <dd><p>Unix timestamp in microseconds.</p>
 </dd></dl>
 
@@ -2336,7 +2336,7 @@ Must be sent before each mission.</p>
 <span id="pymavlincs-mavecstra-module"></span><h2>pyMAVLinCS.mavecstra module<a class="headerlink" href="#module-pyMAVLinCS.mavecstra" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavecstra.MavLogger">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">MavLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path_to_cwd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavecstra.MavLogger" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">MavLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path_to_cwd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavecstra.MavLogger" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Handles logging to a file</p>
 <dl class="field-list simple">
@@ -2368,7 +2368,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavecstra.MavThread">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">MavThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavecstra.MavThread" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">MavThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavecstra.MavThread" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manages Threads.</p>
 <dl class="field-list simple">
@@ -2438,7 +2438,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavecstra.StatustextReceiver">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">StatustextReceiver</span></span><a class="headerlink" href="#pyMAVLinCS.mavecstra.StatustextReceiver" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">StatustextReceiver</span></span><a class="headerlink" href="#pyMAVLinCS.mavecstra.StatustextReceiver" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manages the reception of statustext messages split into chunks</p>
 <dl class="py method">
@@ -2479,7 +2479,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavecstra.TimesyncHandler">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">TimesyncHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_timesync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesync_delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavecstra.TimesyncHandler" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavecstra.</span></span><span class="sig-name descname"><span class="pre">TimesyncHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_timesync</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesync_delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavecstra.TimesyncHandler" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manages the TIMESYNC protocol</p>
 <dl class="field-list simple">
@@ -2575,7 +2575,7 @@ Must be sent before each mission.</p>
 <span id="pymavlincs-mavtypes-module"></span><h2>pyMAVLinCS.mavtypes module<a class="headerlink" href="#module-pyMAVLinCS.mavtypes" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.Angles">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">Angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roll</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.Angles" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">Angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roll</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.Angles" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.Angles.pitch">
@@ -2599,7 +2599,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.AnglesRates">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">AnglesRates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rollspeed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitchspeed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yawspeed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.AnglesRates" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">AnglesRates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rollspeed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitchspeed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yawspeed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.AnglesRates" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.AnglesRates.pitchspeed">
@@ -2623,7 +2623,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.DataInit">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">DataInit</span></span><a class="headerlink" href="#pyMAVLinCS.mavtypes.DataInit" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">DataInit</span></span><a class="headerlink" href="#pyMAVLinCS.mavtypes.DataInit" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.DataInit.address">
@@ -2674,7 +2674,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.EkfOrigin">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">EkfOrigin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.EkfOrigin" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">EkfOrigin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.EkfOrigin" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.EkfOrigin.altitude">
@@ -2698,7 +2698,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.GPSPosition">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">GPSPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_alt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.GPSPosition" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">GPSPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_alt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.GPSPosition" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.GPSPosition.alt">
@@ -2728,7 +2728,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.GeographicPoint">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">GeographicPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.GeographicPoint" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">GeographicPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.GeographicPoint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.GeographicPoint.latitude">
@@ -2746,7 +2746,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.GimbalAngles">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">GimbalAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roll</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.GimbalAngles" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">GimbalAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roll</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.GimbalAngles" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.GimbalAngles.pitch">
@@ -2770,7 +2770,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.HomePosition">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">HomePosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude_home</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude_home</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude_home</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.HomePosition" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">HomePosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude_home</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude_home</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude_home</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.HomePosition" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.HomePosition.altitude_home">
@@ -2794,7 +2794,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.LocalPosition">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">LocalPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.LocalPosition" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">LocalPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.LocalPosition" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.LocalPosition.x">
@@ -2818,7 +2818,7 @@ Must be sent before each mission.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.Speed">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">Speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.Speed" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mavtypes.</span></span><span class="sig-name descname"><span class="pre">Speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mavtypes.Speed" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyMAVLinCS.mavtypes.Speed.vx">
@@ -2845,7 +2845,7 @@ Must be sent before each mission.</p>
 <span id="pymavlincs-mission-control-code-module"></span><h2>pyMAVLinCS.mission_control_code module<a class="headerlink" href="#module-pyMAVLinCS.mission_control_code" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.mission_control_code.MCC">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mission_control_code.</span></span><span class="sig-name descname"><span class="pre">MCC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mission_control_code.MCC" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.mission_control_code.</span></span><span class="sig-name descname"><span class="pre">MCC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mission_control_code.MCC" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing an MCC (Mission Control Code) with various properties, levels, and descriptions.
 Allows categorization of MCCs based on their value and associates descriptions with them.</p>
@@ -2856,7 +2856,7 @@ level (str): Type of MCC (e.g., SUCCESS).
 description (str): A short description of the MCC.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.mission_control_code.MCC.get">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mission_control_code.MCC.get" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mission_control_code.MCC.get" title="Link to this definition"></a></dt>
 <dd><p>Retrieves an MCC object by its numeric value.
 Returns EMPTY if no MCC exists with this value.</p>
 <dl class="field-list simple">
@@ -2868,7 +2868,7 @@ Returns EMPTY if no MCC exists with this value.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.mission_control_code.MCC.get_name">
-<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mission_control_code.MCC.get_name" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.mission_control_code.MCC.get_name" title="Link to this definition"></a></dt>
 <dd><p>Retrieves an MCC object by its name.
 Returns EMPTY if no MCC exists with this name.</p>
 <dl class="field-list simple">
