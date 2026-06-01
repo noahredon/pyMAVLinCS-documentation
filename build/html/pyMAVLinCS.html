@@ -297,30 +297,30 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyMAVLinCS" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.</span></span><span class="sig-name descname"><span class="pre">MAVLinCS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_system=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_component=190</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baud=57600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_heartbeat=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_timesync=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesync_delay=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_automatic_home_request=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">home_request_delay=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sysid_to_request_home=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_rate=4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect='ardupilotmega'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger=&lt;Logger</span> <span class="pre">/mnt/commun/Hélics/Git/pyMAVLinCS/pyMAVLinCS/setup_logger.py</span> <span class="pre">(INFO)&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mavlogfile='mav.tlog'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path_to_cwd=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command_ack_to_hide=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcc_class=&lt;class</span> <span class="pre">'pyMAVLinCS.mission_control_code.MCC'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyMAVLinCS.</span></span><span class="sig-name descname"><span class="pre">MAVLinCS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baud=57600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_system=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_component=190</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect='ardupilotmega'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcc_class=&lt;class</span> <span class="pre">'pyMAVLinCS.mission_control_code.MCC'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger=&lt;Logger</span> <span class="pre">/mnt/commun/gitrepo/pyMAVLinCS/pyMAVLinCS/setup_logger.py</span> <span class="pre">(INFO)&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mavlogfile='mav.tlog'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path_to_cwd=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Allows connection to one or more flight controllers on one link.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>address</strong> (<em>str</em>) – Connection address.</p></li>
+<li><p><strong>baud</strong> (<em>int</em>) – Connection baudrate.</p></li>
 <li><p><strong>source_system</strong> (<em>int</em>) – Ground station MAVLink system ID.</p></li>
 <li><p><strong>source_component</strong> (<em>int</em>) – Ground station MAV_COMPONENT.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – MAVLink system ID of the target flight controller.</p></li>
-<li><p><strong>baud</strong> (<em>int</em>) – Connection baudrate.</p></li>
-<li><p><strong>timeout_heartbeat</strong> (<em>float</em>) – Timeout (in seconds) while waiting for a HEARTBEAT before considering the connection impossible (raises an Exception).</p></li>
-<li><p><strong>send_automatic_timesync</strong> (<em>bool</em>) – Whether to send TIMESYNC messages at regular intervals.</p></li>
-<li><p><strong>timesync_delay</strong> (<em>int</em>) – Delay (in seconds) between two automatic TIMESYNC messages.</p></li>
-<li><p><strong>send_automatic_home_request</strong> (<em>bool</em>) – Whether to request the HOME position at regular intervals.</p></li>
-<li><p><strong>home_request_delay</strong> (<em>int</em>) – Delay (in seconds) between two automatic HOME position requests.</p></li>
-<li><p><strong>sysid_to_request_home</strong> (<em>None</em><em>|</em><em>int</em><em>|</em><em>set</em><em>|</em><em>list</em><em>[</em><em>int</em><em>]</em>) – List of system IDs to which HOME position requests should be sent regularly.</p></li>
-<li><p><strong>pos_rate</strong> (<em>float</em>) – Rate at which the flight controller sends position updates to the ground station.</p></li>
 <li><p><strong>dialect</strong> (<em>str</em>) – MAVLink dialect, essential if timeout_heartbeat == 0. ‘ardupilotmega’ for ArduPilot, ‘common’ for PX4.</p></li>
+<li><p><strong>mcc_class</strong> – MCC base class used in your code (gives access to your custom MCCs).</p></li>
 <li><p><strong>logger</strong> (<em>logging.Logger</em>) – Logger to use.</p></li>
 <li><p><strong>mavlogfile</strong> (<em>str</em><em>|</em><em>None</em>) – Filename for MAVLink message logging.</p></li>
 <li><p><strong>relative_path_to_cwd</strong> (<em>bool</em>) – Whether the tlog path is relative to the current working directory.</p></li>
-<li><p><strong>command_ack_to_hide</strong> (<em>None</em><em>|</em><em>int</em><em>|</em><em>set</em><em>|</em><em>list</em><em>[</em><em>int</em><em>]</em><em>|</em>) – List of COMMAND_ACK (MAV_CMD) to show only in debug mode.</p></li>
-<li><p><strong>mcc_class</strong> – MCC base class used in your code (gives access to your custom MCCs).</p></li>
+<li><p><strong>**timeout_heartbeat</strong> (<em>float</em>) – Timeout (in seconds) while waiting for a HEARTBEAT before considering the connection impossible (raises an Exception). Default: None.</p></li>
+<li><p><strong>**pos_rate</strong> (<em>float</em>) – Rate at which the flight controller sends position updates to the ground station. Default: 4.</p></li>
+<li><p><strong>**send_automatic_timesync</strong> (<em>bool</em>) – Whether to send TIMESYNC messages at regular intervals. Default: False.</p></li>
+<li><p><strong>**timesync_delay</strong> (<em>int</em>) – Delay (in seconds) between two automatic TIMESYNC messages. Default: 3.</p></li>
+<li><p><strong>**send_automatic_home_request</strong> (<em>bool</em>) – Whether to request the HOME position at regular intervals. Default: True.</p></li>
+<li><p><strong>**home_request_delay</strong> (<em>int</em>) – Delay (in seconds) between two automatic HOME position requests. Default: 3.</p></li>
+<li><p><strong>**sysid_to_request_home</strong> (<em>None</em><em>|</em><em>int</em><em>|</em><em>set</em><em>|</em><em>list</em><em>[</em><em>int</em><em>]</em>) – List of system IDs to which HOME position requests should be sent regularly. Default: None.</p></li>
+<li><p><strong>**command_ack_to_hide</strong> (<em>None</em><em>|</em><em>int</em><em>|</em><em>set</em><em>|</em><em>list</em><em>[</em><em>int</em><em>]</em><em>|</em>) – List of COMMAND_ACK (MAV_CMD) to show only in debug mode. Default: None.</p></li>
 </ul>
 </dd>
 </dl>
@@ -328,11 +328,11 @@
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>If target_system is None, the MAVLink ID of the first detected vehicle is used as target.</p></li>
-<li><p>If timeout_heartbeat is None, blocking wait until a valid HEARTBEAT is received (does not raise an Exception).</p></li>
-<li><p>If timeout_heartbeat is 0, no HEARTBEAT wait is performed. Requires the correct MAVLink dialect and assumes MAVLink 2.</p></li>
-<li><p>If sysid_to_request_home is None, HOME position requests are sent only to the target flight controller.</p></li>
 <li><p>If mavlogfile is None, no .tlog file will be generated.</p></li>
-<li><p>If pos_rate&lt;=0, doesn’t request position.</p></li>
+<li><p>If <a href="#id1"><span class="problematic" id="id2">**</span></a>timeout_heartbeat is None, blocking wait until a valid HEARTBEAT is received (does not raise an Exception).</p></li>
+<li><p>If <a href="#id3"><span class="problematic" id="id4">**</span></a>timeout_heartbeat is 0, no HEARTBEAT wait is performed. Requires the correct MAVLink dialect and assumes MAVLink 2.</p></li>
+<li><p>If <a href="#id5"><span class="problematic" id="id6">**</span></a>sysid_to_request_home is None, HOME position requests are sent only to the target flight controller.</p></li>
+<li><p>If <a href="#id7"><span class="problematic" id="id8">**</span></a>pos_rate&lt;=0, doesn’t request position.</p></li>
 </ul>
 </div>
 <dl class="py attribute">
@@ -395,15 +395,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.arm">
-<span class="sig-name descname"><span class="pre">arm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_arming</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.arm" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">arm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.arm" title="Link to this definition"></a></dt>
 <dd><p>Arms the drone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>force</strong> (<em>bool</em>) – Whether to force arming or not.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout.</p></li>
-<li><p><strong>timeout_arming</strong> (<em>float</em><em>|</em><em>None</em>) – Arming wait timeout. 0 if no wait after ACK (returns the ACK wait result as bool). None if no timeout.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout. Default: 2.</p></li>
+<li><p><strong>**timeout_arming</strong> (<em>float</em><em>|</em><em>None</em>) – Arming wait timeout. 0 if no wait after ACK (returns the ACK wait result as bool). None if no timeout. Default: 4.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -570,13 +570,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.clear_waypoints">
-<span class="sig-name descname"><span class="pre">clear_waypoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.clear_waypoints" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">clear_waypoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.clear_waypoints" title="Link to this definition"></a></dt>
 <dd><p>Delete all waypoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>timeout</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the ack.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the ack. Default: 2.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -715,15 +715,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.disarm">
-<span class="sig-name descname"><span class="pre">disarm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_disarming</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.disarm" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">disarm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.disarm" title="Link to this definition"></a></dt>
 <dd><p>Disarms the drone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>force</strong> (<em>bool</em>) – Whether to force disarming or not.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout.</p></li>
-<li><p><strong>timeout_disarming</strong> (<em>float</em><em>|</em><em>None</em>) – Disarming wait timeout. 0 if no wait after ACK (returns the ACK wait result as bool). None if no timeout.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout. Default: 2.</p></li>
+<li><p><strong>**timeout_disarming</strong> (<em>float</em><em>|</em><em>None</em>) – Disarming wait timeout. 0 if no wait after ACK (returns the ACK wait result as bool). None if no timeout. Default: 4.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1069,15 +1069,15 @@ to go from point i to point f.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.land">
-<span class="sig-name descname"><span class="pre">land</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_set_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_land</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.land" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">land</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.land" title="Link to this definition"></a></dt>
 <dd><p>Perform a simple landing. Currently implemented only for ArduPilot.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the ack.</p></li>
-<li><p><strong>timeout_set_mode</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the mode change.</p></li>
-<li><p><strong>timeout_land</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the landing to complete.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the ack. Default: 2.</p></li>
+<li><p><strong>**timeout_set_mode</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the mode change. Default: 3.</p></li>
+<li><p><strong>**timeout_land</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the landing to complete. Default: None.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1232,19 +1232,19 @@ to go from point i to point f.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.open">
-<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_component</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">190</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baud</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">57600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_heartbeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ardupilotmega'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.open" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baud</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">57600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_component</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">190</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ardupilotmega'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.open" title="Link to this definition"></a></dt>
 <dd><p>Opens a MAVLink connection. Ensure any previous connection is closed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>address</strong> (<em>str</em>) – Connection address (e.g., serial port or UDP endpoint).</p></li>
+<li><p><strong>baud</strong> (<em>int</em>) – Baud rate for serial connection.</p></li>
 <li><p><strong>source_system</strong> (<em>int</em>) – MAVLink system ID for the ground station.</p></li>
 <li><p><strong>source_component</strong> (<em>int</em>) – MAVLink component ID for the ground station.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – MAVLink system ID of the flight controller. If None, first detected vehicle is used.</p></li>
-<li><p><strong>baud</strong> (<em>int</em>) – Baud rate for serial connection.</p></li>
-<li><p><strong>timeout_heartbeat</strong> (<em>float</em><em>|</em><em>None</em>) – Time to wait for a HEARTBEAT before considering connection impossible. None = wait indefinitely, 0 = skip waiting.</p></li>
-<li><p><strong>pos_rate</strong> (<em>float</em>) – Frequency (Hz) at which the flight controller sends position messages to the ground station.</p></li>
 <li><p><strong>dialect</strong> (<em>str</em>) – MAVLink 2 dialect. Example: “ardupilotmega” for ArduPilot, “common” for PX4.</p></li>
+<li><p><strong>**timeout_heartbeat</strong> (<em>float</em><em>|</em><em>None</em>) – Time to wait for a HEARTBEAT before considering connection impossible. None = wait indefinitely, 0 = skip waiting. Default: None.</p></li>
+<li><p><strong>**pos_rate</strong> (<em>float</em>) – Frequency (Hz) at which the flight controller sends position messages to the ground station. Default: 4.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1254,7 +1254,7 @@ to go from point i to point f.</p>
 <li><p>Initializes MAVLink version and dialect.</p></li>
 <li><p>Sets up callbacks for sending and receiving MAVLink messages.</p></li>
 <li><p>Starts background MAV thread for message handling.</p></li>
-<li><p>If pos_rate&lt;=0, doesn’t request position.</p></li>
+<li><p>If <a href="#id9"><span class="problematic" id="id10">**</span></a>pos_rate&lt;=0, doesn’t request position.</p></li>
 </ul>
 </div>
 </dd></dl>
@@ -1362,14 +1362,14 @@ to go from point i to point f.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.reboot">
-<span class="sig-name descname"><span class="pre">reboot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.reboot" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reboot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.reboot" title="Link to this definition"></a></dt>
 <dd><p>Reboot the autopilot.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK waiting timeout.</p></li>
-<li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID.</p></li>
 <li><p><strong>force</strong> (<em>bool</em>) – Whether to perform a forced reboot (not recommended; for reference only).</p></li>
+<li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK waiting timeout. Default: 2.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1390,14 +1390,14 @@ type can be a string or a list of strings (almost same logic as the pymavlink on
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.request_home_position">
-<span class="sig-name descname"><span class="pre">request_home_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_home_reception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.request_home_position" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">request_home_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.request_home_position" title="Link to this definition"></a></dt>
 <dd><p>Requests and waits to receive the HOME position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID for the request. Defaults to the master’s ID.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns NaN, NaN, NaN). None if no timeout.</p></li>
-<li><p><strong>timeout_home_reception</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout for receiving the HOME position after ACK. 0 if no wait (returns NaN, NaN, NaN). None if no timeout.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns NaN, NaN, NaN). None if no timeout. Default: 2.</p></li>
+<li><p><strong>**timeout_home_reception</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout for receiving the HOME position after ACK. 0 if no wait (returns NaN, NaN, NaN). None if no timeout. Default: 2.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1420,13 +1420,13 @@ type can be a string or a list of strings (almost same logic as the pymavlink on
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.return_to_launch">
-<span class="sig-name descname"><span class="pre">return_to_launch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.return_to_launch" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">return_to_launch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.return_to_launch" title="Link to this definition"></a></dt>
 <dd><p>Send a Return-To-Launch (RTL) request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>timeout</strong> (<em>float</em><em>|</em><em>None</em>) – ACK waiting timeout.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK waiting timeout. Default: 2.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1649,7 +1649,7 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_gimbal_angles">
-<span class="sig-name descname"><span class="pre">set_gimbal_angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_pitch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_yaw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_in_earth_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_angles" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_gimbal_angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_pitch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_yaw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_in_earth_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_angles" title="Link to this definition"></a></dt>
 <dd><p>Orients the gimbal.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1661,7 +1661,7 @@ Must be sent before each mission.</p>
 <li><p><strong>lock_pitch</strong> (<em>bool</em>) – True = lock pitch relative to the horizon.</p></li>
 <li><p><strong>lock_yaw</strong> (<em>bool</em>) – True = lock yaw relative to North (earth frame).</p></li>
 <li><p><strong>yaw_in_earth_frame</strong> (<em>bool</em>) – True = yaw expressed in Earth frame, otherwise vehicle frame.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em>) – Maximum wait time for ACK (seconds).</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em>) – Maximum wait time for ACK (seconds). Default: 3.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1675,11 +1675,11 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_gimbal_neutral">
-<span class="sig-name descname"><span class="pre">set_gimbal_neutral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_neutral" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_gimbal_neutral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_neutral" title="Link to this definition"></a></dt>
 <dd><p>Sets the gimbal to neutral position (roll=pitch=yaw=0).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>timeout_ack</strong> (<em>float</em>) – Maximum wait time for ACK (seconds).</p>
+<dd class="field-odd"><p><strong>**timeout_ack</strong> (<em>float</em>) – Maximum wait time for ACK (seconds). Default: 3.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if ACK received (command accepted), False otherwise.</p>
@@ -1692,11 +1692,11 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_gimbal_retract">
-<span class="sig-name descname"><span class="pre">set_gimbal_retract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_retract" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_gimbal_retract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_retract" title="Link to this definition"></a></dt>
 <dd><p>Sets the gimbal to retract position (no stabilization).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>timeout_ack</strong> (<em>float</em>) – Maximum wait time for ACK (seconds).</p>
+<dd class="field-odd"><p><strong>**timeout_ack</strong> (<em>float</em>) – Maximum wait time for ACK (seconds). Default: 3.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if ACK received (command accepted), False otherwise.</p>
@@ -1709,7 +1709,7 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_gimbal_target">
-<span class="sig-name descname"><span class="pre">set_gimbal_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_target" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_gimbal_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_gimbal_target" title="Link to this definition"></a></dt>
 <dd><p>Sends a target GPS position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1717,7 +1717,7 @@ Must be sent before each mission.</p>
 <li><p><strong>latitude</strong> (<em>float</em>) – Latitude in degrees.</p></li>
 <li><p><strong>longitude</strong> (<em>float</em>) – Longitude in degrees.</p></li>
 <li><p><strong>altitude</strong> (<em>float</em>) – Absolute altitude (MSL) in meters.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em>) – ACK wait timeout in seconds.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em>) – ACK wait timeout in seconds. Default: 3.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1849,15 +1849,15 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_mode">
-<span class="sig-name descname"><span class="pre">set_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_set_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_mode" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_mode" title="Link to this definition"></a></dt>
 <dd><p>Changes the flight mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mode</strong> (<em>str</em><em>|</em><em>int</em><em>|</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Flight mode. str: mode name. int: mode ID on ArduPilot. tuple[int, int, int]: (MAV_MODE_FLAG, Custom Main Mode, Custom Sub Mode) on PX4.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout.</p></li>
-<li><p><strong>timeout_set_mode</strong> (<em>float</em><em>|</em><em>None</em>) – Mode change wait timeout. 0 if no wait (returns the ACK wait result as bool). None if no timeout.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout. Default: 2.</p></li>
+<li><p><strong>**timeout_set_mode</strong> (<em>float</em><em>|</em><em>None</em>) – Mode change wait timeout. 0 if no wait (returns the ACK wait result as bool). None if no timeout. Default: 4.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1871,7 +1871,7 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_msg_rate">
-<span class="sig-name descname"><span class="pre">set_msg_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_msg_rate" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_msg_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_msg_rate" title="Link to this definition"></a></dt>
 <dd><p>Changes the sending frequency of a specific flight controller message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1879,7 +1879,7 @@ Must be sent before each mission.</p>
 <li><p><strong>msg_type</strong> (<em>str</em><em> | </em><em>int</em>) – Message type (name or ID).</p></li>
 <li><p><strong>rate</strong> (<em>float</em>) – Transmission frequency in Hz.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – ACK wait timeout. 0 if no wait (returns False). None if no timeout. Default: 2.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1893,15 +1893,15 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.set_servo">
-<span class="sig-name descname"><span class="pre">set_servo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servo_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_servo" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_servo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servo_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.set_servo" title="Link to this definition"></a></dt>
 <dd><p>Sets the position of a servo.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>servo_channel</strong> (<em>int</em>) – Servo channel.</p></li>
 <li><p><strong>pwm</strong> (<em>int</em>) – PWM value (between 1000 and 2000. 1000=closed, 2000=open).</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – Acknowledgment wait time.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID for the command. Defaults to the master’s ID.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – Acknowledgment wait time. Default: 2.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2000,14 +2000,14 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.start_mission">
-<span class="sig-name descname"><span class="pre">start_mission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_wp_tkoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.start_mission" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">start_mission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_wp_tkoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.start_mission" title="Link to this definition"></a></dt>
 <dd><p>Start the mission. Currently implemented only for ArduPilot.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>first_wp_tkoff</strong> (<em>bool</em>) – True if the first waypoint is a takeoff waypoint, False otherwise.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
-<li><p><strong>timeout</strong> (<em>float</em><em>|</em><em>None</em>) – Waiting timeout (used in several places).</p></li>
+<li><p><strong>**timeout</strong> (<em>float</em><em>|</em><em>None</em>) – Waiting timeout (used in several places). Default: 3.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2027,17 +2027,17 @@ Must be sent before each mission.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMAVLinCS.MAVLinCS.takeoff">
-<span class="sig-name descname"><span class="pre">takeoff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_takeoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.takeoff" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">takeoff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyMAVLinCS.MAVLinCS.takeoff" title="Link to this definition"></a></dt>
 <dd><p>Perform a takeoff. Make sure to arm the drone beforehand.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>altitude</strong> (<em>float</em>) – Takeoff altitude.</p></li>
 <li><p><strong>pitch</strong> (<em>float</em>) – Enforced pitch.</p></li>
-<li><p><strong>timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the ack. 0 means no waiting (returns False). None means no timeout.</p></li>
-<li><p><strong>timeout_takeoff</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the takeoff to complete. 0 means no waiting (returns the ack result as bool). None means no timeout.</p></li>
-<li><p><strong>precision</strong> (<em>float</em>) – Required altitude precision in meters to consider the takeoff successful. Defaults to 1.</p></li>
 <li><p><strong>target_system</strong> (<em>int</em><em>|</em><em>None</em>) – Target MAVLink system ID. Defaults to the master’s ID.</p></li>
+<li><p><strong>**precision</strong> (<em>float</em>) – Required altitude precision in meters to consider the takeoff successful. Default: 1.</p></li>
+<li><p><strong>**timeout_ack</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the ack. 0 means no waiting (returns False). None means no timeout. Default: 2.</p></li>
+<li><p><strong>**timeout_takeoff</strong> (<em>float</em><em>|</em><em>None</em>) – Timeout while waiting for the takeoff to complete. 0 means no waiting (returns the ack result as bool). None means no timeout. Default: None.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
