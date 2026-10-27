@@ -3,6 +3,7 @@
 
 <p align="center">
   <img alt="License_new" src="https://img.shields.io/badge/License-GPL%20v3-yellow">
+  <a href="https://github.com/noahredon/pyMAVLinCS/actions/workflows/test.yml"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/noahredon/pyMAVLinCS/test.yml?branch=main&label=tests&logo=github"></a>
   <img alt="GitHub" src="https://img.shields.io/badge/github-noahredon-blue?logo=github">
   <img alt="Python" src="https://img.shields.io/badge/Python-grey?logo=python">
 </p>
@@ -110,6 +111,7 @@ pyMAVLinCS is designed as a focused Python library, utilizing highly optimized c
 | **Python** | Primary development language for the API. | Provides a clean, readable syntax ideal for complex robotics and scientific computation. |
 | **pymavlink** | Core dependency for MAVLink protocol communication. | Essential library for parsing, generating, and transmitting MAVLink messages to flight controllers. |
 | **geopy** | Dependency for geographic calculations. | Provides accurate tools for distance, azimuth, and coordinate transformation necessary for mission planning. |
+| **pytest** | Testing framework for unit and SITL integration tests. | Provides an extensible framework for running automated tests with simulated drones (ArduPilot SITL). |
 | **setuptools** | Build system component. | Standard tool used for packaging and distributing Python projects, defining the required metadata. |
 | **wheel** | Build system component. | Enables the creation of standardized binary distribution packages for faster installation. |
 
@@ -132,11 +134,20 @@ The project structure is organized to separate the core MAVLink interface, suppo
 │   ├── 📄 mcc_creation.py             # Example script showing MCC object usage
 │   ├── 📄 __init__.py                 # Initialization file for examples package
 │   └── 📄 connection_test.py          # Script to test basic flight controller connectivity
-├── 📂 tests/                          # Placeholder directory for test files
+├── 📂 tests/                          # Automated test suite (unit and SITL integration tests)
+│   ├── 📄 conftest.py                 # Pytest configuration and SITL fixtures
+│   ├── 📄 test_basic.py               # Basic connectivity & initialization tests
+│   ├── 📄 test_commands.py            # MAVLink command execution tests
+│   ├── 📄 test_control.py             # Drone control & navigation tests
+│   ├── 📄 test_math.py                # Mathematical and geographic utility tests
+│   ├── 📄 test_mcc.py                 # Mission Control Code tests
+│   ├── 📄 test_telemetry.py           # Real-time telemetry tests
 │   └── 📄 __init__.py                 # Initialization file for tests package
 ├── 📂 .github/                        # GitHub configuration
-│   └── 📂 workflows/                  # Continuous Integration workflows
-│       └── 📄 publish.yml             # Workflow for package publication (e.g., PyPI)
+│   └── 📂 workflows/                  # Continuous Integration & Delivery workflows
+│       ├── 📄 test.yml                # CI workflow (pytest with ArduPilot SITL)
+│       └── 📄 publish.yml             # CD workflow for package publication (PyPI)
+├── 📄 pytest.ini                      # Pytest configuration file
 ├── 📄 pyproject.toml                  # Project metadata, dependencies, and build requirements
 ├── 📄 LICENSE                         # Project License (GPL-3.0-or-later)
 ├── 📄 README.md                       # Project documentation (this file)
@@ -316,9 +327,12 @@ We welcome contributions to improve pyMAVLinCS! Your input helps make this proje
    git checkout -b feature/new-telemetry-endpoint
    ```
 3. **Make your changes** - Improve code, documentation, or features within the `pyMAVLinCS/` directory.
-4. **Test thoroughly** - Ensure all existing and new functionality works as expected. While no external testing suite (like pytest) is available right now, manual verification of functionality is crucial.
+4. **Test thoroughly** - Ensure all existing and new functionality works as expected. Automated tests run on push and PR via GitHub Actions using ArduPilot SITL. You can run the test suite locally with `pytest`:
    ```bash
-   # Execute existing test files or examples:
+   # Run the automated test suite:
+   pytest tests/
+
+   # Or execute manual test scripts / examples:
    python examples/connection_test.py 
    ```
 5. **Commit your changes** - Write clear, descriptive commit messages.
