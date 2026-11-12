@@ -11,6 +11,6 @@ Python API for autonomous drone control based on pymavlink
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenu
+   :caption: Contents:
 
    pyMAVLinCS
