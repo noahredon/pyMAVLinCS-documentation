@@ -3,7 +3,7 @@
 
 <p align="center">
   <img alt="License_new" src="https://img.shields.io/badge/License-MPL%202.0-brightgreen">
-  <a href="https://noahredon.github.io/pyMAVLinCS-documentation/"><img alt="Docs" src="https://img.shields.io/badge/docs-online-blue?logo=sphinx"></a>
+  <a href="https://noahredon.github.io/pyMAVLinCS-documentation/pyMAVLinCS.html"><img alt="Docs" src="https://img.shields.io/badge/docs-online-blue?logo=sphinx"></a>
   <a href="https://github.com/noahredon/pyMAVLinCS/actions/workflows/test.yml"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/noahredon/pyMAVLinCS/test.yml?branch=main&label=tests&logo=github"></a>
   <img alt="GitHub" src="https://img.shields.io/badge/github-noahredon-blue?logo=github">
   <img alt="Python" src="https://img.shields.io/badge/Python-%3E%3D3.10-blue?logo=python">
@@ -25,7 +25,7 @@
 
 ## ✨ Overview
 
-> 🌐 **Full Online Documentation:** [https://noahredon.github.io/pyMAVLinCS-documentation/](https://noahredon.github.io/pyMAVLinCS-documentation/)
+> 🌐 **Full Online Documentation:** [https://noahredon.github.io/pyMAVLinCS-documentation/pyMAVLinCS.html](https://noahredon.github.io/pyMAVLinCS-documentation/pyMAVLinCS.html)
 
 pyMAVLinCS is a powerful, professional-grade Python library designed to simplify the development of autonomous systems by providing a high-level, stable, and feature-rich interface for MAVLink-based flight controllers (like ArduPilot and PX4).
 
